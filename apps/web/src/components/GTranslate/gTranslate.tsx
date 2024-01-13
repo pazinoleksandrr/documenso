@@ -1,23 +1,26 @@
 'use client';
 
-// import Head from 'next/head';
 import { useEffect } from 'react';
 
 const GTranslate = () => {
-  useEffect(() => {
-    // This effect will only run on the client side
-    window.gtranslateSettings = {
-      default_language: 'en',
-      native_language_names: true,
-      detect_browser_language: true,
-      languages: ['en', 'fr', 'de', 'it', 'es'],
-      wrapper_selector: '.gtranslate_wrapper',
-      flag_size: 24,
-      switcher_horizontal_position: 'right',
-      switcher_vertical_position: 'top',
-      switcher_open_direction: 'top',
-    };
+  // declare global {
+  //   interface Window { gtranslateSettings: any; }
+  // }
 
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.gtranslateSettings = {
+        default_language: 'en',
+        native_language_names: true,
+        detect_browser_language: true,
+        languages: ['en', 'fr', 'de', 'it', 'es'],
+        wrapper_selector: '.gtranslate_wrapper',
+        flag_size: 24,
+        switcher_horizontal_position: 'right',
+        switcher_vertical_position: 'top',
+        switcher_open_direction: 'top',
+      };
+    }
     // Load the gtranslate script
     const script = document.createElement('script');
     script.src = 'https://cdn.gtranslate.net/widgets/latest/dwf.js';
