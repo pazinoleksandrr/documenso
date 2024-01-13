@@ -11,7 +11,7 @@ import { cn } from '@documenso/ui/lib/utils';
 import { Toaster } from '@documenso/ui/primitives/toaster';
 import { TooltipProvider } from '@documenso/ui/primitives/tooltip';
 
-// import GTranslate from '~/components/GTranslate/gTranslate';
+import GTranslate from '~/components/GTranslate/gTranslate';
 import { ThemeProvider } from '~/providers/next-theme';
 import { PostHogPageview } from '~/providers/posthog';
 
@@ -60,7 +60,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
-        {/* <script src="https://cdn.gtranslate.net/widgets/latest/globe.js" defer></script> */}
       </head>
 
       <Suspense>
@@ -79,8 +78,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             <Toaster />
           </FeatureFlagProvider>
         </LocaleProvider>
-        {/* <div className="gtranslate_wrapper"></div> */}
-        {/* <GTranslate /> */}
+
+        <GTranslate />
       </body>
     </html>
   );
