@@ -11,7 +11,6 @@ import { cn } from '@documenso/ui/lib/utils';
 import { Toaster } from '@documenso/ui/primitives/toaster';
 import { TooltipProvider } from '@documenso/ui/primitives/tooltip';
 
-import GTranslate from '~/components/GTranslate/gTranslate';
 import { ThemeProvider } from '~/providers/next-theme';
 import { PostHogPageview } from '~/providers/posthog';
 
@@ -79,7 +78,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           </FeatureFlagProvider>
         </LocaleProvider>
 
-        <GTranslate />
+        {/* <GTranslate /> */}
       </body>
     </html>
   );

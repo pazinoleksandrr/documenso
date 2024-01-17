@@ -11,6 +11,8 @@ import { Search } from 'lucide-react';
 import { cn } from '@documenso/ui/lib/utils';
 import { Button } from '@documenso/ui/primitives/button';
 
+import GTranslate from '~/components/GTranslate/gTranslate';
+
 import { CommandMenu } from '../common/command-menu';
 
 const navigationLinks = [
@@ -66,6 +68,7 @@ export const DesktopNav = ({ className, ...props }: DesktopNavProps) => {
 
       <CommandMenu open={open} onOpenChange={setOpen} />
 
+      <GTranslate />
       <Button
         variant="outline"
         className="text-muted-foreground flex w-96 items-center justify-between rounded-lg"

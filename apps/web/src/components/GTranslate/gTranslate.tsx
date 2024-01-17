@@ -2,6 +2,8 @@
 
 import { useEffect } from 'react';
 
+import './gTranslate.css';
+
 // Extend the Window interface to include gtranslateSettings
 interface Window {
   gtranslateSettings: {
@@ -12,7 +14,6 @@ interface Window {
     wrapper_selector: string;
     flag_size: number;
     switcher_horizontal_position: string;
-    switcher_vertical_position: string;
     switcher_open_direction: string;
   };
 }
@@ -28,7 +29,6 @@ declare global {
       wrapper_selector: string;
       flag_size: number;
       switcher_horizontal_position: string;
-      switcher_vertical_position: string;
       switcher_open_direction: string;
     };
   }
@@ -41,12 +41,11 @@ const GTranslate: React.FC = () => {
         default_language: 'en',
         native_language_names: true,
         detect_browser_language: true,
-        languages: ['en', 'fr', 'de', 'it', 'es'],
+        languages: ['en', 'fr', 'de', 'it', 'es', 'iw', 'uk'],
         wrapper_selector: '.gtranslate_wrapper',
         flag_size: 24,
-        switcher_horizontal_position: 'right',
-        switcher_vertical_position: 'top',
-        switcher_open_direction: 'top',
+        switcher_horizontal_position: 'inline',
+        switcher_open_direction: 'bottom',
       };
 
       // Log gtranslateSettings to satisfy ESLint
