@@ -1,0 +1,26 @@
+{
+  "name": "@documenso/trpc",
+  "version": "1.0.0",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "clean": "rimraf node_modules"
+  },
+  "dependencies": {
+    "@documenso/lib": "*",
+    "@documenso/prisma": "*",
+    "@tanstack/react-query": "^4.32.0",
+    "@trpc/client": "^10.36.0",
+    "@trpc/next": "^10.36.0",
+    "@trpc/react-query": "^10.36.0",
+    "@trpc/server": "^10.36.0",
+    "luxon": "^3.4.0",
+    "superjson": "^1.13.1",
+    "ts-pattern": "^5.0.5",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {}
+}
